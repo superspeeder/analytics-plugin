@@ -1,20 +1,18 @@
 main: ${PACKAGE}.${NAME}
 name: ${NAME}
 version: "${VERSION}"
-api-version: "1.16"
-author: AUTHOR
-description: DESCRIPTION
+api-version: "1.19"
+author: superspeeder101
+description: A plugin which adds analytics about what happens on the server (ex. who broke which blocks).
+website: woc.dev/mc/plugins/analytics.html
+prefix: Analytics
 commands:
-  ex:
-    description: Base command for EXAMPLE
-    usage: "For a list of commands, type /ex help"
-    aliases: example
+  analytics:
+    description: "Base command for analytics"
 permissions:
-  example.test:
-    description: DESCRIPTION
-    default: true
-  example.*:
-    description: Grants all other permissions
-    default: false
-    children:
-      example.test: true
+  analytics.base:
+    description: "Allows you command access to the analytics plugin"
+  analytics.active.read:
+    description: "Allows you to query if the analytics system is active"
+  analytics.active.set:
+    description: "Allows you to change if the analytics system is active"
